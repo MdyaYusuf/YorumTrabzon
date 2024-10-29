@@ -1,0 +1,308 @@
+:root {
+    --main: #82c8fc;
+    --alternative: #541c3f;
+    --white: #eef3db;
+    --orange: #eb6440;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--main);
+    color: var(--white);
+}
+main {
+    padding-top: 125px;
+}
+@media (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .row {
+        text-align: center;
+    }
+  }
+.navbar {
+    background: var(--alternative);
+}
+a {
+    text-decoration: none;
+    color: var(--main);
+    transition: all 0.4s ease;
+}
+.text-alternative {
+    color: var(--alternative);
+}
+.text-white {
+    color: var(--white);
+}
+.text-main {
+    color: var(--main);
+}
+.text-orange {
+    color: var(--orange);
+}
+.text-custom {
+    position: relative;
+    font-weight: bold;
+}
+.text-custom::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 110%;
+    width: 0%;
+    height: 2px;
+    background-color: var(--orange);
+    transition: all 0.4s;
+}
+.text-custom:hover::after {
+    width: 100%;
+}
+.bg-main {
+    background-color: var(--main);
+}
+.bg-alternative {
+    background-color: var(--alternative);
+}
+.border-alternative {
+    border: 1px solid var(--alternative);
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--alternative);
+    color: var(--main);
+    max-width: 600px;
+    min-width: 280px;
+    width: 60%;
+    border-radius: 12px;
+    padding: 18px 24px;
+}
+@media (max-width: 991px) {
+    .categories {
+        flex-wrap: wrap;
+    }
+}
+.categories .category {
+    padding: 6px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.4s ease;
+}
+@media (max-width: 699px) {
+    .categories .category {
+        padding: 6px 10px;
+    }
+}
+.categories .active {
+    border-bottom: 3px solid var(--orange);
+}
+.categories .category:hover {
+    scale: 1.1;
+}
+.card.hide {
+    display: none;
+}
+.card.show {
+    display: block;
+}
+.page-link {
+    font-weight: bold;
+    background-color: var(--alternative);
+    color: var(--white);
+}
+.page-link:hover {
+    background-color: var(--white)!important;
+    color: var(--alternative)!important;
+    border: 1px solid var(--white)!important;
+}
+.page-link:focus {
+    background-color: var(--alternative);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.page-link.active {
+    background-color: var(--white);
+    color: var(--alternative);
+    border: 1px solid var(--white);
+}
+.pagination .page-item.active .page-link {
+    background-color: var(--white);
+    color: var(--alternative);
+    border: 1px solid var(--white);
+}
+.pagination .page-link:focus {
+    --bs-pagination-focus-box-shadow: none !important;
+}
+.shadow-effect {
+    transition: all 0.5s;
+}
+.shadow-effect:hover {
+    box-shadow: -10px 10px 0 0 var(--orange);
+}
+.btn-custom {
+    background-color: var(--alternative);
+    color: var(--white);
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+.btn-custom:hover {
+    background-color: var(--alternative);
+    color: var(--main);
+    font-weight: bold;
+}
+.btn-custom:focus {
+    background-color: var(--alternative);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.btn.btn-custom:active {
+    background-color: var(--main);
+    color: var(--alternative);
+}
+.btn.show.btn-custom {
+    background-color: var(--alternative);
+    color: var(--white);
+    font-weight: bold;
+}
+.btn.show.btn-custom:hover {
+    background-color: var(--alternative);
+    color: var(--main);
+    font-weight: bold;
+}
+.iconbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    color: var(--alternative);
+}
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--alternative);
+    border-radius: 100px;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+}
+.social-icons a:hover {
+    background-color: var(--main);
+}
+#transfer .card {
+    min-height: 345px;
+}
+#transfer .card .card-body {
+    margin: 0px 12px;
+    border-top: 1px solid var(--orange);
+    border-bottom: none;
+}
+#transfer .card .card-header,
+#transfer .card .card-footer {
+    border: none;
+}
+#transfer .table th,
+#transfer .table td {
+    background-color: var(--main);
+    font-weight: bold;
+}
+#transfer .table th { 
+    color: var(--alternative);
+}
+#transfer .table-rounded {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px
+}
+#transfer .table-header-space th {
+    padding-left: 15px;
+}
+#transfer .table-header-space td {
+    padding-right: 15px;
+}
+@media (max-width: 474px) {
+    #transfer .table-header-space th {
+        padding-left: 10px;
+    }
+    #transfer .table-header-space td {
+        padding-right: 10px;
+    }
+}
+#transfer .table {
+    min-width: 350px;
+    text-align: center;
+}
+@media (max-width: 399px) {
+    #transfer .table {
+        min-width: 200px;
+    }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+    #transfer .table {
+        min-width: 260px;
+    }
+}
+@media (min-width: 500px) and (max-width: 991px) {
+    #transfer .table {
+        min-width: 340px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #transfer .table {
+        min-width: 260px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #transfer .table {
+        min-width: 320px;
+    }
+}
+#fixture .table {
+    max-width: 550px;
+}
+@media (max-width: 399px) {
+    #fixture .table {
+        font-size: 13px;
+    }
+}
+#point-table .table {
+    max-width: 650px;
+}
+@media (max-width: 399px) {
+    #point-table .table {
+        font-size: 14px;
+    }
+}
+@media (max-width: 499px) {
+    .player-profile p {
+        font-size: 13px;
+    }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+    .player-profile .table {
+        font-size: 13px;
+    }
+}
+@media (min-width: 350px) and (max-width: 399px) {
+    .player-profile .table {
+        font-size: 12px;
+    }
+}
+@media (max-width: 349px) {
+    .player-profile .table {
+        font-size: 11px;
+    }
+}
+.ts {
+    color: var(--alternative);
+    border-bottom: 2px solid var(--main);
+}
+#point-table .ts {
+    font-weight: bold;
+}
